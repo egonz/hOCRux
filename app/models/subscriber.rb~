@@ -1,0 +1,3 @@
+class Subscriber < ActiveRecord::Base
+	beelongs_to :user
+end

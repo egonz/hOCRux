@@ -1,0 +1,10 @@
+class PageMq
+
+	def self.publish page
+		client = OnStomp::Client.new("stomp://127.0.0.1:61613")
+		client.publish('', page.id)
+
+		client.publish
+	end
+
+end

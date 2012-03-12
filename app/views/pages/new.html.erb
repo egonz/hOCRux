@@ -1,0 +1,36 @@
+<script>
+$(document).ready(function() {
+  <% key = Rails.application.config.session_options[:key] %>
+  var uploadify_script_data = {};
+  var csrf_param = $('meta[name=csrf-param]').attr('content');
+  var csrf_token = $('meta[name=csrf-token]').attr('content');
+  uploadify_script_data[csrf_param] = encodeURI(encodeURIComponent(csrf_token));
+  uploadify_script_data['<%= key %>'] = '<%= cookies[key] %>';
+	var script = "/pages/?book_id=<%=@user_book.id%>";
+	var cancel_img = "<%= image_path('cancel.png') %>";
+	var page_no = 0;
+
+  $('#uploadify').uploadify({
+    uploader        : '/uploadify.swf',
+    script          : script,
+    cancelImg       : cancel_img,
+    auto            : true,
+    multi           : true,
+    removeCompleted : true,
+    scriptData      : uploadify_script_data,
+    onComplete      : function(event, ID, fileObj, doc, data) {
+			$('#pages').append(doc);
+			page_no += 1;
+    },
+		onAllComplete   : function(event,data) {
+      $.post("/pages/last_page", { book_id: <%=@user_book.id%>, total_pages: page_no });
+    }
+  });
+});
+</script>
+
+<input id="uploadify" name="uploadify" type="file" />
+
+<div id="pages">
+	<%= render :partial => 'pages/page', :collection => @user_book.pages %>
+</div>

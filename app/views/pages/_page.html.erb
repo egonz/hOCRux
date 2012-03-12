@@ -1,0 +1,5 @@
+<div id="page_<%=page%>" class="page">
+	<a href="<%=page.image_url%>">
+		<%= image_tag page.image_url(:thumb) if page.image? %>
+	</a>
+</div>

@@ -1,0 +1,52 @@
+<div class="box">
+	<div id="header">
+		New Book
+	</div>
+
+	<div id="header-2">
+		Enter the Title OR ISBN for your new book. Though an ISBN is ideal.
+	</div>
+
+	<%= form_tag("/user_books", :method => "post", :action => "create", :id => "new-book-form") do %>
+		<div class="new-book-form-fields">
+			<div class="new-book-form-label">
+				<%= label_tag(:isbn, "ISBN:") %>
+			</div>
+			<div class="new-book-form-field">
+				<%= text_field_tag(:isbn) %>
+			</div>
+		</div>
+		<div class="new-book-form-fields">
+			<div class="new-book-form-label">
+				<%= label_tag(:title, "Book title:") %>
+			</div>
+			<div class="new-book-form-field">
+				<%= text_field_tag(:title, '', :size=>40) %>
+			</div>
+		</div>
+		<div id="new-book-form-fields">
+			<div class="new-book-form-label">
+				Auto-generate PDF?
+			</div>
+			<div class="new-book-form-field">
+				<%= check_box_tag(:auto_gen_pdf) %>
+			</div>
+		</div>
+		<div id="new-book-form-fields">
+			<div class="new-book-form-label">
+				Email PDF when finished?
+			</div>
+			<div class="new-book-form-field">
+				<%= check_box_tag(:email_doc) %>
+			</div>
+		</div>
+		<div id="new-book-form-submit">
+			<div class="new-book-form-label">
+				&nbsp;
+			</div>
+			<div class="new-book-form-field">
+				<%= submit_tag("Create") %>
+			</div>
+		</div>
+	<% end %>
+</div>

@@ -1,0 +1,106 @@
+<div class="box">
+	<% unless @user_book.nil? %>
+		<div id="user-book-links">
+			<%= link_to 'View Processed Pages', pages_path(:book_id=>@user_book) %> | <%= link_to 'Add Pages', new_page_path(:book_id=>@user_book) %>
+		</div>
+
+		<div id="user_book">
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					ID:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.id %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					Title:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.title %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					Authors:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.authors %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					Publisher:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.publisher %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					Published Date:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.published_date %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					Description:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.description %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					ISBN:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.isbn %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					Page Count:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.page_count %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					Print Type:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.print_type %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					Categories:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.categories %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					Average Rating:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.average_rating %>
+				</div>
+			</div>
+			<div class="user_book-fields">
+				<div class="user_book-label">
+					Ratings Count:
+				</div>
+				<div class="user_book-field">
+					<%= @user_book.book.ratings_count %>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>

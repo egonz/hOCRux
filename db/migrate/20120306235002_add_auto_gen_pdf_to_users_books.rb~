@@ -1,0 +1,6 @@
+class AddAutoGenPdfToUsersBooks < ActiveRecord::Migration
+  def change
+    add_column :users_books, :auto_gen_pdf, :boolean
+
+  end
+end

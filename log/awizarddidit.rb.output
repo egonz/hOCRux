@@ -1,0 +1,554 @@
+awizarddidit.rb: process with pid 3538 started.
+awizarddidit.rb: process with pid 4325 started.
+awizarddidit.rb: process with pid 4382 started.
+/home/egonz/projects/Majick12/bin/awizarddidit.rb:23:in `<top (required)>': undefined method `connect' for #<Stomp::Client:0x0000000280f320> (NoMethodError)
+	from /home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/daemons-1.1.8/lib/daemons/application.rb:202:in `load'
+	from /home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/daemons-1.1.8/lib/daemons/application.rb:202:in `start_load'
+	from /home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/daemons-1.1.8/lib/daemons/application.rb:297:in `start'
+	from /home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/daemons-1.1.8/lib/daemons/controller.rb:70:in `run'
+	from /home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/daemons-1.1.8/lib/daemons.rb:147:in `block in run'
+	from /home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/daemons-1.1.8/lib/daemons/cmdline.rb:109:in `call'
+	from /home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/daemons-1.1.8/lib/daemons/cmdline.rb:109:in `catch_exceptions'
+	from /home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/daemons-1.1.8/lib/daemons.rb:146:in `run'
+	from bin/majickd.rb:10:in `<main>'
+awizarddidit.rb: process with pid 28620 started.
+I, [2012-03-06T19:40:42.284409 #28620]  INFO -- : connected
+awizarddidit.rb: process with pid 29073 started.
+I, [2012-03-06T19:49:59.896777 #29073]  INFO -- : connected
+I, [2012-03-06T19:54:14.021181 #29073]  INFO -- : Processing Message: {"created_at":"2012-03-07T03:54:13Z","file_name":null,"id":22,"image":{"url":"/uploads/page/image/22/060_R.JPG","thumb":{"url":"/uploads/page/image/22/thumb_060_R.JPG"}},"page_number":null,"processed":null,"updated_at":"2012-03-07T03:54:13Z","user_book_id":14}
+I, [2012-03-06T19:54:14.215219 #29073]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/22/060_R.JPG ...
+I, [2012-03-06T19:54:14.607722 #29073]  INFO -- : writing /home/egonz/projects/Majick12/tmp/060_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/060_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/060_R.mpc
+convert /home/egonz/projects/Majick12/tmp/060_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/060_R.mpc
+D, [2012-03-06T19:54:53.455615 #29073] DEBUG -- : Time elapsed 38304.578389 miliseconds
+I, [2012-03-06T19:54:53.492397 #29073]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/22/060_R_mj12.JPG
+I, [2012-03-06T19:56:55.440577 #29073]  INFO -- : Processing Message: {"created_at":"2012-03-07T03:56:55Z","file_name":null,"id":23,"image":{"url":"/uploads/page/image/23/061_L.JPG","thumb":{"url":"/uploads/page/image/23/thumb_061_L.JPG"}},"page_number":null,"processed":null,"updated_at":"2012-03-07T03:56:55Z","user_book_id":14}
+I, [2012-03-06T19:56:55.464100 #29073]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/23/061_L.JPG ...
+I, [2012-03-06T19:56:55.887991 #29073]  INFO -- : writing /home/egonz/projects/Majick12/tmp/061_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/061_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/061_L.mpc
+convert /home/egonz/projects/Majick12/tmp/061_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/061_L.mpc
+D, [2012-03-06T19:57:33.932631 #29073] DEBUG -- : Time elapsed 37944.998124 miliseconds
+I, [2012-03-06T19:57:33.932783 #29073]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/23/061_L_mj12.JPG
+I, [2012-03-06T19:59:22.763826 #29073]  INFO -- : Processing Message: {"created_at":"2012-03-07T03:59:22Z","file_name":null,"id":24,"image":{"url":"/uploads/page/image/24/062_R.JPG","thumb":{"url":"/uploads/page/image/24/thumb_062_R.JPG"}},"page_number":null,"processed":null,"updated_at":"2012-03-07T03:59:22Z","user_book_id":14}
+I, [2012-03-06T19:59:22.764259 #29073]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/24/062_R.JPG ...
+I, [2012-03-06T19:59:23.763979 #29073]  INFO -- : writing /home/egonz/projects/Majick12/tmp/062_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/062_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/062_R.mpc
+convert /home/egonz/projects/Majick12/tmp/062_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/062_R.mpc
+D, [2012-03-06T20:00:35.272484 #29073] DEBUG -- : Time elapsed 71228.493179 miliseconds
+I, [2012-03-06T20:00:35.284070 #29073]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/24/062_R_mj12.JPG
+I, [2012-03-06T20:00:35.860704 #29073]  INFO -- : Processing Message: {"created_at":"2012-03-07T03:59:34Z","file_name":null,"id":25,"image":{"url":"/uploads/page/image/25/063_L.JPG","thumb":{"url":"/uploads/page/image/25/thumb_063_L.JPG"}},"page_number":null,"processed":null,"updated_at":"2012-03-07T03:59:34Z","user_book_id":14}
+I, [2012-03-06T20:00:35.863555 #29073]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/25/063_L.JPG ...
+I, [2012-03-06T20:00:36.280582 #29073]  INFO -- : writing /home/egonz/projects/Majick12/tmp/063_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/063_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/063_L.mpc
+convert /home/egonz/projects/Majick12/tmp/063_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/063_L.mpc
+D, [2012-03-06T20:01:08.840344 #29073] DEBUG -- : Time elapsed 32432.884024000003 miliseconds
+I, [2012-03-06T20:01:08.840498 #29073]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/25/063_L_mj12.JPG
+I, [2012-03-06T20:01:09.400431 #29073]  INFO -- : Processing Message: {"created_at":"2012-03-07T03:59:45Z","file_name":null,"id":26,"image":{"url":"/uploads/page/image/26/064_R.JPG","thumb":{"url":"/uploads/page/image/26/thumb_064_R.JPG"}},"page_number":null,"processed":null,"updated_at":"2012-03-07T03:59:45Z","user_book_id":14}
+I, [2012-03-06T20:01:09.403774 #29073]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/26/064_R.JPG ...
+I, [2012-03-06T20:01:09.812410 #29073]  INFO -- : writing /home/egonz/projects/Majick12/tmp/064_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/064_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/064_R.mpc
+convert /home/egonz/projects/Majick12/tmp/064_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/064_R.mpc
+D, [2012-03-06T20:01:40.852924 #29073] DEBUG -- : Time elapsed 30849.120187 miliseconds
+I, [2012-03-06T20:01:40.853081 #29073]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/26/064_R_mj12.JPG
+I, [2012-03-06T20:01:41.428202 #29073]  INFO -- : Processing Message: {"created_at":"2012-03-07T03:59:59Z","file_name":null,"id":27,"image":{"url":"/uploads/page/image/27/065_L.JPG","thumb":{"url":"/uploads/page/image/27/thumb_065_L.JPG"}},"page_number":null,"processed":null,"updated_at":"2012-03-07T03:59:59Z","user_book_id":14}
+I, [2012-03-06T20:01:41.428776 #29073]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/27/065_L.JPG ...
+I, [2012-03-06T20:01:41.848444 #29073]  INFO -- : writing /home/egonz/projects/Majick12/tmp/065_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/065_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/065_L.mpc
+convert /home/egonz/projects/Majick12/tmp/065_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/065_L.mpc
+D, [2012-03-06T20:02:17.064679 #29073] DEBUG -- : Time elapsed 35043.957673000004 miliseconds
+I, [2012-03-06T20:02:17.067083 #29073]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/27/065_L_mj12.JPG
+awizarddidit.rb: process with pid 29310 started.
+awizarddidit.rb: process with pid 29577 started.
+I, [2012-03-06T20:35:51.452301 #29577]  INFO -- : connected
+awizarddidit.rb: process with pid 29616 started.
+I, [2012-03-06T20:39:02.779917 #29616]  INFO -- : connected
+I, [2012-03-06T20:42:28.316375 #29616]  INFO -- : Processing Message: {"created_at":"2012-03-07T04:42:27Z","id":29,"image":{"url":"/uploads/page/image/29/067_L.JPG","thumb":{"url":"/uploads/page/image/29/thumb_067_L.JPG"}},"page_number":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T04:42:27Z","user_book_id":14}
+I, [2012-03-06T20:42:28.316934 #29616]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/29/067_L.JPG ...
+I, [2012-03-06T20:42:28.843297 #29616]  INFO -- : writing /home/egonz/projects/Majick12/tmp/067_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/067_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/067_L.mpc
+convert /home/egonz/projects/Majick12/tmp/067_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/067_L.mpc
+D, [2012-03-06T20:43:02.964000 #29616] DEBUG -- : Time elapsed 33988.520200000006 miliseconds
+I, [2012-03-06T20:43:03.024136 #29616]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/29/067_L_mj12.JPG
+I, [2012-03-07T03:35:47.506768 #29616]  INFO -- : Processing Message: {"created_at":"2012-03-07T11:35:30Z","id":30,"image":{"url":"/uploads/page/image/30/040_R.JPG","thumb":{"url":"/uploads/page/image/30/thumb_040_R.JPG"}},"last_page":null,"page_no":1,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T11:35:30Z","user_book_id":21}
+I, [2012-03-07T03:35:47.668299 #29616]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/30/040_R.JPG ...
+I, [2012-03-07T03:35:48.776458 #29616]  INFO -- : writing /home/egonz/projects/Majick12/tmp/040_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/040_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/040_R.mpc
+convert /home/egonz/projects/Majick12/tmp/040_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/040_R.mpc
+D, [2012-03-07T03:37:05.391870 #29616] DEBUG -- : Time elapsed 70072.873047 miliseconds
+I, [2012-03-07T03:37:05.392378 #29616]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/30/040_R_mj12.JPG
+I, [2012-03-07T03:37:09.206937 #29616]  INFO -- : Processing Message: {"created_at":"2012-03-07T11:36:08Z","id":31,"image":{"url":"/uploads/page/image/31/041_L.JPG","thumb":{"url":"/uploads/page/image/31/thumb_041_L.JPG"}},"last_page":null,"page_no":2,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T11:36:08Z","user_book_id":21}
+I, [2012-03-07T03:37:09.232781 #29616]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/31/041_L.JPG ...
+I, [2012-03-07T03:37:10.064328 #29616]  INFO -- : writing /home/egonz/projects/Majick12/tmp/041_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/041_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/041_L.mpc
+convert /home/egonz/projects/Majick12/tmp/041_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/041_L.mpc
+D, [2012-03-07T03:37:59.865746 #29616] DEBUG -- : Time elapsed 47935.632944 miliseconds
+I, [2012-03-07T03:37:59.903091 #29616]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/31/041_L_mj12.JPG
+awizarddidit.rb: process with pid 30580 started.
+I, [2012-03-07T03:42:26.027881 #30580]  INFO -- : connected
+I, [2012-03-07T03:59:35.616651 #30580]  INFO -- : Processing Message: {"created_at":"2012-03-07T11:59:28Z","id":32,"image":{"url":"/uploads/page/image/32/032_R.JPG","thumb":{"url":"/uploads/page/image/32/thumb_032_R.JPG"}},"last_page":null,"page_no":1,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T11:59:28Z","user_book_id":22}
+I, [2012-03-07T03:59:35.758651 #30580]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/32/032_R.JPG ...
+I, [2012-03-07T03:59:38.036467 #30580]  INFO -- : writing /home/egonz/projects/Majick12/tmp/032_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/032_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/032_R.mpc
+convert /home/egonz/projects/Majick12/tmp/032_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/032_R.mpc
+D, [2012-03-07T04:00:22.144443 #30580] DEBUG -- : Time elapsed 38052.789692 miliseconds
+I, [2012-03-07T04:00:22.161025 #30580]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/32/032_R_mj12.JPG
+E, [2012-03-07T04:00:25.398601 #30580] ERROR -- : Error in handling queued majick message  [e=undefined method `user_book' for #<Hash:0x0000000444fd78>].
+E, [2012-03-07T04:00:25.398797 #30580] ERROR -- : /home/egonz/projects/Majick12/bin/awizarddidit.rb:50:in `block in <top (required)>'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/components/subscription.rb:23:in `call'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/components/subscription.rb:23:in `call'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/subscription_manager.rb:41:in `dispatch_subscription'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/subscription_manager.rb:16:in `block in configure_subscription_management'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/event_manager.rb:30:in `call'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/event_manager.rb:30:in `block in trigger_event'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/event_manager.rb:30:in `each'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/event_manager.rb:30:in `trigger_event'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/client_events.rb:157:in `trigger_frame_event'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/client_events.rb:173:in `trigger_after_receiving'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/client.rb:147:in `dispatch_received'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/connections/base.rb:215:in `block in io_process_read'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/connections/serializers/stomp_1.rb:144:in `bytes_to_frame'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/connections/base.rb:213:in `io_process_read'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/connections/base.rb:125:in `io_process'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/components/threaded_processor.rb:28:in `block in start'
+I, [2012-03-07T04:00:25.399204 #30580]  INFO -- : Processing Message: {"created_at":"2012-03-07T11:59:45Z","id":33,"image":{"url":"/uploads/page/image/33/033_L.JPG","thumb":{"url":"/uploads/page/image/33/thumb_033_L.JPG"}},"last_page":null,"page_no":2,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T11:59:45Z","user_book_id":22}
+I, [2012-03-07T04:00:25.399574 #30580]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/33/033_L.JPG ...
+I, [2012-03-07T04:00:25.848254 #30580]  INFO -- : writing /home/egonz/projects/Majick12/tmp/033_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/033_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/033_L.mpc
+convert /home/egonz/projects/Majick12/tmp/033_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/033_L.mpc
+D, [2012-03-07T04:01:00.171962 #30580] DEBUG -- : Time elapsed 34144.291264 miliseconds
+I, [2012-03-07T04:01:00.172318 #30580]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/33/033_L_mj12.JPG
+E, [2012-03-07T04:01:00.987332 #30580] ERROR -- : Error in handling queued majick message  [e=undefined method `user_book' for #<Hash:0x000000043f0e68>].
+E, [2012-03-07T04:01:00.987528 #30580] ERROR -- : /home/egonz/projects/Majick12/bin/awizarddidit.rb:50:in `block in <top (required)>'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/components/subscription.rb:23:in `call'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/components/subscription.rb:23:in `call'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/subscription_manager.rb:41:in `dispatch_subscription'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/subscription_manager.rb:16:in `block in configure_subscription_management'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/event_manager.rb:30:in `call'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/event_manager.rb:30:in `block in trigger_event'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/event_manager.rb:30:in `each'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/event_manager.rb:30:in `trigger_event'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/client_events.rb:157:in `trigger_frame_event'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/interfaces/client_events.rb:173:in `trigger_after_receiving'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/client.rb:147:in `dispatch_received'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/connections/base.rb:215:in `block in io_process_read'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/connections/serializers/stomp_1.rb:144:in `bytes_to_frame'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/connections/base.rb:213:in `io_process_read'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/connections/base.rb:125:in `io_process'
+/home/egonz/.rvm/gems/ruby-1.9.2-p290/gems/onstomp-1.0.6/lib/onstomp/components/threaded_processor.rb:28:in `block in start'
+awizarddidit.rb: process with pid 30728 started.
+I, [2012-03-07T04:07:22.308277 #30728]  INFO -- : connected
+I, [2012-03-07T04:07:22.966300 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T11:59:28Z","id":32,"image":{"url":"/uploads/page/image/32/032_R.JPG","thumb":{"url":"/uploads/page/image/32/thumb_032_R.JPG"}},"last_page":null,"page_no":1,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T11:59:28Z","user_book_id":22}
+I, [2012-03-07T04:07:23.073775 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/32/032_R.JPG ...
+I, [2012-03-07T04:07:23.663963 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/032_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/032_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/032_R.mpc
+convert /home/egonz/projects/Majick12/tmp/032_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/032_R.mpc
+D, [2012-03-07T04:07:53.535428 #30728] DEBUG -- : Time elapsed 29715.842781 miliseconds
+I, [2012-03-07T04:07:53.592044 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/32/032_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/32/032_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/32/032_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/32/032_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/32/032_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/32/032_R_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T04:08:06.056825 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T11:59:45Z","id":33,"image":{"url":"/uploads/page/image/33/033_L.JPG","thumb":{"url":"/uploads/page/image/33/thumb_033_L.JPG"}},"last_page":null,"page_no":2,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T11:59:45Z","user_book_id":22}
+I, [2012-03-07T04:08:06.068367 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/33/033_L.JPG ...
+I, [2012-03-07T04:08:06.636349 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/033_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/033_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/033_L.mpc
+convert /home/egonz/projects/Majick12/tmp/033_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/033_L.mpc
+D, [2012-03-07T04:08:37.640872 #30728] DEBUG -- : Time elapsed 30848.323961 miliseconds
+I, [2012-03-07T04:08:37.643617 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/33/033_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/33/033_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/33/033_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/33/033_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/33/033_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/33/033_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T05:45:49.124610 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T13:45:43Z","id":34,"image":{"url":"/uploads/page/image/34/087_L.JPG","thumb":{"url":"/uploads/page/image/34/thumb_087_L.JPG"}},"last_page":null,"page_no":1,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T13:45:43Z","user_book_id":23}
+I, [2012-03-07T05:45:49.312521 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/34/087_L.JPG ...
+I, [2012-03-07T05:46:19.328063 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/087_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/087_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/087_L.mpc
+convert /home/egonz/projects/Majick12/tmp/087_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/087_L.mpc
+D, [2012-03-07T05:47:30.703996 #30728] DEBUG -- : Time elapsed 70175.798432 miliseconds
+I, [2012-03-07T05:47:30.704399 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/34/087_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/34/087_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/34/087_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/34/087_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/34/087_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/34/087_L_mj12.html
+Warning: tag mismatch: 'span' can not close last open: 'rNc</span'
+Warning: tag mismatch: 'span' can not close last open: 'rNc</span'
+Warning: tag mismatch: 'p' can not close last open: 'rNc</span'
+Warning: tag mismatch: 'div' can not close last open: 'rNc</span'
+Warning: tag mismatch: 'div' can not close last open: 'rNc</span'
+Warning: tag mismatch: 'body' can not close last open: 'rNc</span'
+Warning: tag mismatch: 'html' can not close last open: 'rNc</span'
+Warning: unclosed tag: 'rNc</span'
+Warning: unclosed tag: 'span'
+Warning: unclosed tag: 'span'
+Warning: unclosed tag: 'span'
+Warning: unclosed tag: 'p'
+Warning: unclosed tag: 'div'
+Warning: unclosed tag: 'div'
+Warning: unclosed tag: 'body'
+Warning: unclosed tag: 'html'
+Writing unmodified DCT buffer.
+I, [2012-03-07T05:47:54.352525 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T13:46:06Z","id":35,"image":{"url":"/uploads/page/image/35/088_R.JPG","thumb":{"url":"/uploads/page/image/35/thumb_088_R.JPG"}},"last_page":null,"page_no":2,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T13:46:06Z","user_book_id":23}
+I, [2012-03-07T05:47:54.439895 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/35/088_R.JPG ...
+I, [2012-03-07T05:47:55.735602 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/088_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/088_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/088_R.mpc
+convert /home/egonz/projects/Majick12/tmp/088_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/088_R.mpc
+D, [2012-03-07T05:48:53.332757 #30728] DEBUG -- : Time elapsed 57280.606817 miliseconds
+I, [2012-03-07T05:48:53.405872 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/35/088_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/35/088_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/35/088_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/35/088_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/35/088_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/35/088_R_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T05:49:03.956390 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T13:46:22Z","id":36,"image":{"url":"/uploads/page/image/36/089_L.JPG","thumb":{"url":"/uploads/page/image/36/thumb_089_L.JPG"}},"last_page":null,"page_no":3,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T13:46:22Z","user_book_id":23}
+I, [2012-03-07T05:49:03.956917 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/36/089_L.JPG ...
+I, [2012-03-07T05:49:04.372341 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/089_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/089_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/089_L.mpc
+convert /home/egonz/projects/Majick12/tmp/089_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/089_L.mpc
+D, [2012-03-07T05:49:33.936383 #30728] DEBUG -- : Time elapsed 29344.649911 miliseconds
+I, [2012-03-07T05:49:33.936710 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/36/089_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/36/089_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/36/089_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/36/089_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/36/089_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/36/089_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T05:49:44.514892 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T13:46:50Z","id":37,"image":{"url":"/uploads/page/image/37/090_R.JPG","thumb":{"url":"/uploads/page/image/37/thumb_090_R.JPG"}},"last_page":null,"page_no":4,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T13:46:50Z","user_book_id":23}
+I, [2012-03-07T05:49:44.515510 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/37/090_R.JPG ...
+I, [2012-03-07T05:49:45.268807 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/090_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/090_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/090_R.mpc
+convert /home/egonz/projects/Majick12/tmp/090_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/090_R.mpc
+D, [2012-03-07T05:50:24.404205 #30728] DEBUG -- : Time elapsed 38916.071656 miliseconds
+I, [2012-03-07T05:50:24.404578 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/37/090_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/37/090_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/37/090_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/37/090_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/37/090_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/37/090_R_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T05:50:35.520385 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T13:47:03Z","id":38,"image":{"url":"/uploads/page/image/38/091_L.JPG","thumb":{"url":"/uploads/page/image/38/thumb_091_L.JPG"}},"last_page":null,"page_no":5,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T13:47:03Z","user_book_id":23}
+I, [2012-03-07T05:50:35.584500 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/38/091_L.JPG ...
+I, [2012-03-07T05:50:36.040335 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/091_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/091_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/091_L.mpc
+convert /home/egonz/projects/Majick12/tmp/091_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/091_L.mpc
+D, [2012-03-07T05:51:06.524700 #30728] DEBUG -- : Time elapsed 30192.591712999998 miliseconds
+I, [2012-03-07T05:51:06.555326 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/38/091_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/38/091_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/38/091_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/38/091_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/38/091_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/38/091_L_mj12.html
+Warning: tag mismatch: 'span' can not close last open: '-mad."</span'
+Warning: tag mismatch: 'span' can not close last open: '-mad."</span'
+Warning: tag mismatch: 'p' can not close last open: '-mad."</span'
+Warning: tag mismatch: 'div' can not close last open: '-mad."</span'
+Warning: tag mismatch: 'div' can not close last open: '-mad."</span'
+Warning: tag mismatch: 'body' can not close last open: '-mad."</span'
+Warning: tag mismatch: 'html' can not close last open: '-mad."</span'
+Warning: unclosed tag: '-mad."</span'
+Warning: unclosed tag: 'span'
+Warning: unclosed tag: 'span'
+Warning: unclosed tag: 'span'
+Warning: unclosed tag: 'p'
+Warning: unclosed tag: 'div'
+Warning: unclosed tag: 'div'
+Warning: unclosed tag: 'body'
+Warning: unclosed tag: 'html'
+Writing unmodified DCT buffer.
+I, [2012-03-07T05:51:19.478041 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T13:47:16Z","id":39,"image":{"url":"/uploads/page/image/39/092_R.JPG","thumb":{"url":"/uploads/page/image/39/thumb_092_R.JPG"}},"last_page":null,"page_no":6,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T13:47:16Z","user_book_id":23}
+I, [2012-03-07T05:51:19.520432 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/39/092_R.JPG ...
+I, [2012-03-07T05:51:20.075840 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/092_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/092_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/092_R.mpc
+convert /home/egonz/projects/Majick12/tmp/092_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/092_R.mpc
+D, [2012-03-07T05:51:54.251221 #30728] DEBUG -- : Time elapsed 34006.503619999996 miliseconds
+I, [2012-03-07T05:51:54.262206 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/39/092_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/39/092_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/39/092_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/39/092_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/39/092_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/39/092_R_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T05:52:05.812861 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T13:47:26Z","id":40,"image":{"url":"/uploads/page/image/40/093_L.JPG","thumb":{"url":"/uploads/page/image/40/thumb_093_L.JPG"}},"last_page":null,"page_no":7,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T13:47:26Z","user_book_id":23}
+I, [2012-03-07T05:52:05.827945 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/40/093_L.JPG ...
+I, [2012-03-07T05:52:06.292121 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/093_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/093_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/093_L.mpc
+convert /home/egonz/projects/Majick12/tmp/093_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/093_L.mpc
+D, [2012-03-07T05:52:35.023598 #30728] DEBUG -- : Time elapsed 28475.645872 miliseconds
+I, [2012-03-07T05:52:35.024061 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/40/093_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/40/093_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/40/093_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/40/093_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/40/093_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/40/093_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T05:52:54.528528 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T13:47:36Z","id":41,"image":{"url":"/uploads/page/image/41/094_R.JPG","thumb":{"url":"/uploads/page/image/41/thumb_094_R.JPG"}},"last_page":null,"page_no":8,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T13:47:36Z","user_book_id":23}
+I, [2012-03-07T05:52:54.531516 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/41/094_R.JPG ...
+I, [2012-03-07T05:52:54.928116 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/094_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/094_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/094_R.mpc
+convert /home/egonz/projects/Majick12/tmp/094_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/094_R.mpc
+D, [2012-03-07T05:53:37.135297 #30728] DEBUG -- : Time elapsed 42035.608806 miliseconds
+I, [2012-03-07T05:53:37.135566 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/41/094_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/41/094_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/41/094_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/41/094_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/41/094_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/41/094_R_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T06:10:44.110047 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T14:10:42Z","id":42,"image":{"url":"/uploads/page/image/42/088_R.JPG","thumb":{"url":"/uploads/page/image/42/thumb_088_R.JPG"}},"last_page":null,"page_no":1,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T14:10:42Z","user_book_id":24}
+I, [2012-03-07T06:10:44.258798 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/42/088_R.JPG ...
+I, [2012-03-07T06:10:48.256359 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/088_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/088_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/088_R.mpc
+convert /home/egonz/projects/Majick12/tmp/088_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/088_R.mpc
+D, [2012-03-07T06:12:07.092386 #30728] DEBUG -- : Time elapsed 76824.043388 miliseconds
+I, [2012-03-07T06:12:07.104611 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/42/088_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/42/088_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/42/088_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/42/088_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/42/088_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/42/088_R_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T06:12:35.545737 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T14:11:36Z","id":44,"image":{"url":"/uploads/page/image/44/090_R.JPG","thumb":{"url":"/uploads/page/image/44/thumb_090_R.JPG"}},"last_page":null,"page_no":3,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T14:11:36Z","user_book_id":24}
+I, [2012-03-07T06:12:35.552003 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/44/090_R.JPG ...
+I, [2012-03-07T06:12:36.227778 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/090_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/090_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/090_R.mpc
+convert /home/egonz/projects/Majick12/tmp/090_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/090_R.mpc
+D, [2012-03-07T06:13:40.064487 #30728] DEBUG -- : Time elapsed 63576.654762 miliseconds
+I, [2012-03-07T06:13:40.084134 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/44/090_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/44/090_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/44/090_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/44/090_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/44/090_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/44/090_R_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T06:14:00.395952 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T14:12:09Z","id":46,"image":{"url":"/uploads/page/image/46/092_R.JPG","thumb":{"url":"/uploads/page/image/46/thumb_092_R.JPG"}},"last_page":null,"page_no":5,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T14:12:09Z","user_book_id":24}
+I, [2012-03-07T06:14:00.396484 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/46/092_R.JPG ...
+I, [2012-03-07T06:14:01.363792 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/092_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/092_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/092_R.mpc
+convert /home/egonz/projects/Majick12/tmp/092_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/092_R.mpc
+D, [2012-03-07T06:14:55.883776 #30728] DEBUG -- : Time elapsed 54247.309211 miliseconds
+I, [2012-03-07T06:14:55.927669 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/46/092_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/46/092_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/46/092_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/46/092_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/46/092_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/46/092_R_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T06:15:14.931521 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T14:12:33Z","id":48,"image":{"url":"/uploads/page/image/48/094_R.JPG","thumb":{"url":"/uploads/page/image/48/thumb_094_R.JPG"}},"last_page":null,"page_no":7,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T14:12:33Z","user_book_id":24}
+I, [2012-03-07T06:15:14.960929 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/48/094_R.JPG ...
+I, [2012-03-07T06:15:15.667832 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/094_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/094_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/094_R.mpc
+convert /home/egonz/projects/Majick12/tmp/094_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/094_R.mpc
+D, [2012-03-07T06:16:09.651187 #30728] DEBUG -- : Time elapsed 53705.322678000004 miliseconds
+I, [2012-03-07T06:16:09.665503 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/48/094_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/48/094_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/48/094_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/48/094_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/48/094_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/48/094_R_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T06:47:30.696894 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T14:47:29Z","id":49,"image":{"url":"/uploads/page/image/49/131_L.JPG","thumb":{"url":"/uploads/page/image/49/thumb_131_L.JPG"}},"last_page":null,"page_no":1,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T14:47:29Z","user_book_id":25}
+I, [2012-03-07T06:47:30.773771 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/49/131_L.JPG ...
+I, [2012-03-07T06:47:31.412084 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/131_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/131_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/131_L.mpc
+convert /home/egonz/projects/Majick12/tmp/131_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/131_L.mpc
+D, [2012-03-07T06:49:26.204073 #30728] DEBUG -- : Time elapsed 114315.090217 miliseconds
+I, [2012-03-07T06:49:26.204350 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/49/131_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/49/131_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/49/131_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/49/131_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/49/131_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/49/131_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T06:49:51.428321 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T14:48:11Z","id":51,"image":{"url":"/uploads/page/image/51/133_L.JPG","thumb":{"url":"/uploads/page/image/51/thumb_133_L.JPG"}},"last_page":null,"page_no":3,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T14:48:11Z","user_book_id":25}
+I, [2012-03-07T06:49:51.443767 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/51/133_L.JPG ...
+I, [2012-03-07T06:49:52.364391 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/133_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/133_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/133_L.mpc
+convert /home/egonz/projects/Majick12/tmp/133_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/133_L.mpc
+D, [2012-03-07T06:51:29.027722 #30728] DEBUG -- : Time elapsed 91476.466281 miliseconds
+I, [2012-03-07T06:51:29.040310 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/51/133_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/51/133_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/51/133_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/51/133_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/51/133_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/51/133_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T06:51:54.969807 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T14:48:56Z","id":53,"image":{"url":"/uploads/page/image/53/135_L.JPG","thumb":{"url":"/uploads/page/image/53/thumb_135_L.JPG"}},"last_page":null,"page_no":5,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T14:48:56Z","user_book_id":25}
+I, [2012-03-07T06:51:54.992004 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/53/135_L.JPG ...
+I, [2012-03-07T06:51:55.340043 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/135_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/135_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/135_L.mpc
+convert /home/egonz/projects/Majick12/tmp/135_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/135_L.mpc
+D, [2012-03-07T06:52:35.708379 #30728] DEBUG -- : Time elapsed 40212.312703 miliseconds
+I, [2012-03-07T06:52:35.708512 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/53/135_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/53/135_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/53/135_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/53/135_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/53/135_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/53/135_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T09:03:23.975721 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T17:03:22Z","id":54,"image":{"url":"/uploads/page/image/54/125_L.JPG","thumb":{"url":"/uploads/page/image/54/thumb_125_L.JPG"}},"last_page":null,"page_no":1,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T17:03:22Z","user_book_id":26}
+I, [2012-03-07T09:03:24.396999 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/54/125_L.JPG ...
+I, [2012-03-07T09:04:57.694490 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/125_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/125_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/125_L.mpc
+convert /home/egonz/projects/Majick12/tmp/125_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/125_L.mpc
+D, [2012-03-07T09:06:42.007588 #30728] DEBUG -- : Time elapsed 94074.39201299999 miliseconds
+I, [2012-03-07T09:06:42.024028 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/54/125_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/54/125_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/54/125_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/54/125_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/54/125_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/54/125_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T09:06:57.766678 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T17:04:36Z","id":56,"image":{"url":"/uploads/page/image/56/127_L.JPG","thumb":{"url":"/uploads/page/image/56/thumb_127_L.JPG"}},"last_page":null,"page_no":3,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T17:04:36Z","user_book_id":26}
+I, [2012-03-07T09:06:57.933443 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/56/127_L.JPG ...
+I, [2012-03-07T09:06:58.592515 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/127_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/127_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/127_L.mpc
+convert /home/egonz/projects/Majick12/tmp/127_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/127_L.mpc
+D, [2012-03-07T09:08:05.231458 #30728] DEBUG -- : Time elapsed 63982.560958999995 miliseconds
+I, [2012-03-07T09:08:05.231654 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/56/127_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/56/127_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/56/127_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/56/127_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/56/127_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/56/127_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T09:29:08.535642 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T17:29:06Z","id":57,"image":{"url":"/uploads/page/image/57/119_L.JPG","thumb":{"url":"/uploads/page/image/57/thumb_119_L.JPG"}},"last_page":null,"page_no":1,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T17:29:06Z","user_book_id":27}
+I, [2012-03-07T09:29:08.568623 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/57/119_L.JPG ...
+I, [2012-03-07T09:29:08.991914 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/119_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/119_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/119_L.mpc
+convert /home/egonz/projects/Majick12/tmp/119_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/119_L.mpc
+D, [2012-03-07T09:30:32.455432 #30728] DEBUG -- : Time elapsed 83220.811251 miliseconds
+I, [2012-03-07T09:30:32.484180 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/57/119_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/57/119_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/57/119_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/57/119_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/57/119_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/57/119_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T09:30:46.187932 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T17:29:47Z","id":59,"image":{"url":"/uploads/page/image/59/121_L.JPG","thumb":{"url":"/uploads/page/image/59/thumb_121_L.JPG"}},"last_page":null,"page_no":3,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T17:29:47Z","user_book_id":27}
+I, [2012-03-07T09:30:46.204254 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/59/121_L.JPG ...
+I, [2012-03-07T09:30:46.780505 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/121_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/121_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/121_L.mpc
+convert /home/egonz/projects/Majick12/tmp/121_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/121_L.mpc
+D, [2012-03-07T09:31:20.613836 #30728] DEBUG -- : Time elapsed 33733.175430999996 miliseconds
+I, [2012-03-07T09:31:20.614005 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/59/121_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/59/121_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/59/121_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/59/121_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/59/121_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/59/121_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T09:35:32.204726 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T17:29:21Z","id":58,"image":{"url":"/uploads/page/image/58/120_R.JPG","thumb":{"url":"/uploads/page/image/58/thumb_120_R.JPG"}},"last_page":null,"page_no":2,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T17:29:21Z","user_book_id":27}
+I, [2012-03-07T09:35:32.207972 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/58/120_R.JPG ...
+I, [2012-03-07T09:35:32.556191 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/120_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/120_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/120_R.mpc
+convert /home/egonz/projects/Majick12/tmp/120_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/120_R.mpc
+D, [2012-03-07T09:36:27.344341 #30728] DEBUG -- : Time elapsed 54688.161694999995 miliseconds
+I, [2012-03-07T09:36:27.344502 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/58/120_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/58/120_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/58/120_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/58/120_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/58/120_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/58/120_R_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T09:42:46.759567 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T17:42:45Z","id":60,"image":{"url":"/uploads/page/image/60/163_L.JPG","thumb":{"url":"/uploads/page/image/60/thumb_163_L.JPG"}},"last_page":null,"page_no":1,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T17:42:45Z","user_book_id":28}
+I, [2012-03-07T09:42:46.760174 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/60/163_L.JPG ...
+I, [2012-03-07T09:42:47.295211 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/163_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/163_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/163_L.mpc
+convert /home/egonz/projects/Majick12/tmp/163_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/163_L.mpc
+D, [2012-03-07T09:44:04.440307 #30728] DEBUG -- : Time elapsed 77033.392554 miliseconds
+I, [2012-03-07T09:44:04.440653 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/60/163_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/60/163_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/60/163_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/60/163_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/60/163_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/60/163_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T09:58:49.803702 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T17:58:48Z","id":63,"image":{"url":"/uploads/page/image/63/061_L.JPG","thumb":{"url":"/uploads/page/image/63/thumb_061_L.JPG"}},"last_page":null,"page_no":1,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T17:58:48Z","user_book_id":29}
+I, [2012-03-07T09:58:49.940644 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/63/061_L.JPG ...
+I, [2012-03-07T09:59:04.069665 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/061_L.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/061_L.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/061_L.mpc
+convert /home/egonz/projects/Majick12/tmp/061_L.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/061_L.mpc
+D, [2012-03-07T09:59:39.428257 #30728] DEBUG -- : Time elapsed 35183.456184999995 miliseconds
+I, [2012-03-07T09:59:39.428432 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/63/061_L_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/63/061_L_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/63/061_L_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/63/061_L_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/63/061_L_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/63/061_L_mj12.html
+Writing unmodified DCT buffer.
+I, [2012-03-07T09:59:48.401883 #30728]  INFO -- : Processing Message: {"created_at":"2012-03-07T17:58:59Z","id":64,"image":{"url":"/uploads/page/image/64/062_R.JPG","thumb":{"url":"/uploads/page/image/64/thumb_062_R.JPG"}},"last_page":null,"page_no":2,"page_number":null,"pdf_file":null,"processed":null,"processed_image":null,"updated_at":"2012-03-07T17:58:59Z","user_book_id":29}
+I, [2012-03-07T09:59:48.423066 #30728]  INFO -- : Processing /home/egonz/projects/Majick12/public/uploads/page/image/64/062_R.JPG ...
+I, [2012-03-07T09:59:48.916822 #30728]  INFO -- : writing /home/egonz/projects/Majick12/tmp/062_R.mpc
+convert -respect-parenthesis \( /home/egonz/projects/Majick12/tmp/062_R.mpc -colorspace gray -type grayscale -normalize \) \
+	\( -clone 0  -colorspace gray -negate -lat 15x15+5% -contrast-stretch 0 \) \
+	-compose copy_opacity -composite -fill 'white' -opaque none +matte \
+	/home/egonz/projects/Majick12/tmp/062_R.mpc
+convert /home/egonz/projects/Majick12/tmp/062_R.mpc -level 0,100,.96% -clamp +level 0,100% /home/egonz/projects/Majick12/tmp/062_R.mpc
+D, [2012-03-07T10:00:23.287660 #30728] DEBUG -- : Time elapsed 34191.531352 miliseconds
+I, [2012-03-07T10:00:23.371878 #30728]  INFO -- : save image /home/egonz/projects/Majick12/public/uploads/page/image/64/062_R_mj12.JPG
+tesseract /home/egonz/projects/Majick12/public/uploads/page/image/64/062_R_mj12.JPG /home/egonz/projects/Majick12/public/uploads/page/image/64/062_R_mj12 -l en hocr
+Tesseract Open Source OCR Engine with Leptonica
+hocr2pdf -i /home/egonz/projects/Majick12/public/uploads/page/image/64/062_R_mj12.JPG -o /home/egonz/projects/Majick12/public/uploads/page/image/64/062_R_mj12.pdf < /home/egonz/projects/Majick12/public/uploads/page/image/64/062_R_mj12.html
+Writing unmodified DCT buffer.

@@ -1,0 +1,23 @@
+<div id="header">
+	Your Books
+</div>
+
+<div id="user_books">
+	<% @user_books.each do |user_book| %>
+		<% unless user_book.book.nil? %>
+			<div class="book">
+				<div>
+					<%= user_book.book.title %>
+				</div>
+				<div>
+					<%= link_to 'Show', user_book %>
+					<%= link_to 'Remove', user_book, :confirm => 'Are you sure?', :method => :delete %>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+</div>
+
+<div id="add_book">
+	<%= link_to 'New book', new_user_books_path %>
+</div>

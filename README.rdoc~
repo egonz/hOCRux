@@ -1,0 +1,28 @@
+# Gems
+
+## CarrierWave - Image Upload
+https://github.com/jnicklas/carrierwave
+
+## RMagick - Image Processing
+http://rmagick.rubyforge.org/
+
+##Plan A
+
+	## Tesseract - OCR
+	https://github.com/scottdavis/ruby-tesseract
+
+	## HOCR to PDF
+	http://www.exactcode.de/site/open_source/exactimage/hocr2pdf/
+
+##PLAN B
+
+	## OCR and PDF
+	http://rubygems.org/gems/pdfbeads
+
+	http://rubygems.org/gems/hpricot
+
+## Google Books
+https://github.com/zeantsoi/googlebooks
+
+## Devise - Login
+https://github.com/plataformatec/devise

@@ -1,0 +1,25 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+
+var upload_params = {
+	'#{key}' : '#{cookies[key]}',
+  '#{request_forgery_protection_token}' : '#{form_authenticity_token}',
+	'_http_accept': 'application/javascript'
+};
+
+var url = $('input#photo_image').attr('rel');
+
+$('input#photo_image').uploadify({
+  'uploader' : '/assets/uploadify.swf',
+  'script' : url,
+  'fileDataName' : 'page[image]',
+  'fileExt' : '*.png;*.jpg;*.gif',
+  'cancelImg' : '/images/cancel.png',
+  'multi' : true,
+  'scriptData' : upload_params,
+  'auto' : true,
+  'onComplete' : function(e, id, obj, response, data) {
+  	$('#pages').append(response);
+	}
+});

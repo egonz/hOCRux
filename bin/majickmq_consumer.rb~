@@ -1,0 +1,57 @@
+#!/usr/bin/env ruby
+#
+# Dequeue an image scan to be majickd, majick it, and insert the result in the db
+#
+
+# pull in our Rails 3.0 env
+APP_PATH = File.expand_path('../config/application',  __FILE__)
+require File.expand_path('../../config/boot',  __FILE__)
+require File.expand_path('../../config/environment',  __FILE__)
+require 'json'
+include JSON
+
+logger = Logger.new(STDOUT)
+logger.formatter = Logger::Formatter.new
+
+# Set up our exit flag for a clean shutdown
+exit_requested = false
+
+Signal.trap('INT') { exit_requested = true }
+Signal.trap('TERM') { exit_requested = true }
+
+client = OnStomp::Client.new(stomp://@127.0.0.1:61613)
+client.connect
+
+client.subscribe("queue/majick/in", :ack=>'client') do |m|
+logger.info("handling message")
+
+begin
+	#parse basic info
+	#timestamp = Time.at(m.headers[:timestamp].to_i/1000)   # it's in milliseconds
+
+	#doc = Document.new(body)
+	if (!exit_requested)
+		#  user_id = doc.elements["GameDetails/Player"].attributes["id"]
+		#  session_id = doc.elements["GameDetails/Player"].attributes["session"]
+		#  prebet_balance = doc.elements["GameDetails/Player"].attributes["preBetBalance"]
+		#  game_name = doc.elements["GameDetails/Game"].attributes["name"]
+		#  betDate = doc.elements["GameDetails/Game"].attributes["betDate"]
+
+		#  timestamp = Time.parse(betDate) unless (betDate.nil?)
+
+		#  UserSlotHistory.handle_data_with_xml(user_id, session_id, game_name, prebet_balance, timestamp, body
+
+		client.ack m
+	end
+
+	rescue => e
+  	logger.error("Error in handling queued majick message  [e=#{e}].")
+   	logger.error(e.backtrace.join("\n"))
+ 	end
+end
+
+loop do
+ sleep(10)
+end while !exit_requested
+
+client.disconnect

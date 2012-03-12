@@ -1,0 +1,5 @@
+<div id="page_<%=page%>"
+
+.page[page]
+	= link_to page.image_url
+		= image_tag page.image_url(:thumb) if page.image?
