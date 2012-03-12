@@ -43,23 +43,30 @@ client.subscribe("/queue/imagescans", :ack=>'client') do |m|
 
 			if File.exist? mm.output_image_path
 				p = Page.find page["id"]
-				p.processed=true
-				p.processed_image=mm.output_image_path
-				p.save
 
 				if p.user_book.auto_gen_pdf?
-					logger.info "Performing OCR and generating PDF"
+					logger.debug "Performing OCR and generating PDF"
 					hocrux = Hocrux.new mm.output_image_path
 					hocrux.hocr
 					hocrux.pdf
 
 					logger.info "Processed PDF For #{mm.output_image_path}"
 
+					p.processed=true
+					p.processed_image=mm.output_image_path
+					p.pdf_file = hocrux.pdf_file
+					p.save
+
+					logger.debug "Saved Page Data"
+
 					if p.all_pages_processed?
 						logger.info "Finished Processing Pages For #{p.user_book.book.title}"
 						#p.user_book.publish_to_mq
 					end
-
+				else
+					p.processed=true
+					p.processed_image=mm.output_image_path
+					p.save
 				end
 			end
 

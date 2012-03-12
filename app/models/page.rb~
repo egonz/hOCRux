@@ -13,15 +13,17 @@ class Page < ActiveRecord::Base
 		end
   end
 
-	def all_pages_processed
-
-	end
-
 	def publish_to_mq
 		client = OnStomp::Client.new("stomp://127.0.0.1:61613")
 		client.connect
 		client.send('/queue/imagescans', self.to_json.to_s)
 		client.disconnect
+	end
+
+	def all_pages_processed?
+		total_pages_processed = Page.where("user_book_id=? AND processed=true",  self.user_book.id ).count
+
+		self.user_book.total_pages == total_pages_processed
 	end
 
 	def self.set_last_page user_book_id
