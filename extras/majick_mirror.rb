@@ -12,8 +12,8 @@ require File.expand_path('../../config/boot',  __FILE__)
 require File.expand_path('../../config/environment',  __FILE__)
 require 'RMagick'
 require 'fileutils'
-require '/home/egonz/projects/Majick12/extras/text_cleaner.rb'
-require '/home/egonz/projects/Majick12/extras/levels.rb'
+require 'text_cleaner.rb'
+require 'levels.rb'
 
 include Magick
 

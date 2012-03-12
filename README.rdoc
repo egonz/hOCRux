@@ -17,5 +17,3 @@ https://github.com/zeantsoi/googlebooks
 
 ## Devise - Login
 https://github.com/plataformatec/devise
-
-Eddie Loves Tami
