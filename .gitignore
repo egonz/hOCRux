@@ -12,6 +12,8 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
+/log/*.pid
+/log/*.output
 /tmp
 /public/uploads
 /public/user_books
