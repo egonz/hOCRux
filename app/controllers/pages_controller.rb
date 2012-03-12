@@ -2,7 +2,7 @@ class PagesController < ApplicationController
 
 	before_filter :authenticate_user!
 	before_filter :find_user_book
-  before_filter :find_or_build_page
+  before_filter :find_or_build_page, :except => ['last_page']
 
 	def new
 
