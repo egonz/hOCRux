@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120307162040) do
+ActiveRecord::Schema.define(:version => 20120318133122) do
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(:version => 20120307162040) do
     t.string   "pdf_file"
     t.integer  "page_no"
     t.boolean  "last_page"
+    t.integer  "width"
+    t.integer  "height"
   end
 
   create_table "subscribers", :force => true do |t|
@@ -78,6 +80,8 @@ ActiveRecord::Schema.define(:version => 20120307162040) do
     t.boolean  "auto_gen_pdf"
     t.boolean  "email_doc"
     t.integer  "total_pages"
+    t.integer  "width"
+    t.integer  "height"
   end
 
   create_table "users", :force => true do |t|

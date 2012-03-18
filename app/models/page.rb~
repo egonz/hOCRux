@@ -4,13 +4,8 @@ class Page < ActiveRecord::Base
   mount_uploader :image, PageUploader
 
 	before_create do |page|
-    prev_last_page = Page.where(:user_book_id=>page.user_book.id).last
-
-		if prev_last_page.nil?
-			page.page_no = 1
-		else
-			page.page_no = prev_last_page.page_no + 1
-		end
+    set_page_no
+		set_width_height
   end
 
 	def publish_to_mq
@@ -26,16 +21,19 @@ class Page < ActiveRecord::Base
 		self.user_book.total_pages == total_pages_processed
 	end
 
-	def self.set_last_page user_book_id
-		old_last_pages = Page.where(:user_book_id=>user_book_id, :last_page=>true)
+	private
 
-		old_last_pages.each do |old_last_page|
-			old_last_page.last_page=false
-			old_last_page.save
+	def set_page_no
+		prev_last_page = Page.where(:user_book_id=>page.user_book.id).last
+
+		if prev_last_page.nil?
+			page.page_no = 1
+		else
+			page.page_no = prev_last_page.page_no + 1
 		end
+	end
 
-		page = Page.where(:user_book_id=>user_book_id).last
-		page.last_page=true
-		page.save
+	def set_width_height
+
 	end
 end
