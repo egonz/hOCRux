@@ -35,15 +35,14 @@ client.subscribe("/queue/imagescans", :ack=>'client') do |m|
 		timestamp = Time.at(m.headers[:timestamp].to_i/1000)   # it's in milliseconds
 
  		page = JSON.parse(body)
+		p = Page.find page["id"]
 
 		if (!exit_requested)
-			mm = MajickMirror.new page['image']['url']
+			mm = MajickMirror.new(p.image.to_s, p.user_book.width, p.user_book.height)
 			mm.process_image
 			mm.create_jpg_copy
 
 			if File.exist? mm.output_image_path
-				p = Page.find page["id"]
-
 				if p.user_book.auto_gen_pdf?
 					logger.debug "Performing OCR and generating PDF"
 					hocrux = Hocrux.new mm.output_image_path

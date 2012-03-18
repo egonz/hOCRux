@@ -14,8 +14,21 @@ class UserBook < ActiveRecord::Base
 	def add_pages new_pages_count
 		old_page_count = self.total_pages.nil? ? 0 : self.total_pages
 		puts "Old Page Count #{old_page_count} New Page Count #{new_pages_count}"
-		self.total_pages = old_page_count + new_pages_count
+		self.total_pages = old_page_count + new_pages_count.to_i
 		self.save
+	end
+
+	def set_max_width_height
+		self.width = Page.maximum(:width, :conditions=>["user_book_id=?", self.id])
+   	self.height = Page.maximum(:height, :conditions=>["user_book_id=?", self.id])
+
+		self.save
+	end
+
+	def publish_pages
+		self.pages.each do |page|
+			page.publish_to_mq
+		end
 	end
 
 	def self.create_book title, isbn, user, auto_gen_pdf, email_doc

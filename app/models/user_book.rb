@@ -18,6 +18,14 @@ class UserBook < ActiveRecord::Base
 		self.save
 	end
 
+	def publish_pages
+		set_max_width_height
+
+		self.pages.each do |page|
+			page.publish_to_mq
+		end
+	end
+
 	def self.create_book title, isbn, user, auto_gen_pdf, email_doc
 		logger.info "Searching for Book Title #{title} OR ISBN #{isbn}..."
 		book = Book.find_book title, isbn
@@ -32,6 +40,15 @@ class UserBook < ActiveRecord::Base
 			:auto_gen_pdf=>auto_gen_pdf, :email_doc=>email_doc
 		@user_book.save
 		@user_book
+	end
+
+	private
+
+	def set_max_width_height
+		self.width = Page.maximum(:width, :conditions=>["user_book_id=?", self.id])
+   	self.height = Page.maximum(:height, :conditions=>["user_book_id=?", self.id])
+
+		self.save
 	end
 
 end

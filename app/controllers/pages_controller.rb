@@ -20,9 +20,6 @@ class PagesController < ApplicationController
       logger.error "Error uploading photo"
       flash[:error] = 'Photo could not be uploaded'
     end
-    
-    #Publish to MQ for ImageMagick processing
-    @page.publish_to_mq
 
     render :text => render_to_string(:partial => 'pages/page', :locals => {:page => @page})
   end
@@ -30,6 +27,7 @@ class PagesController < ApplicationController
   def last_page
     total_pages = params['total_pages']
     @user_book.add_pages total_pages
+		@user_book.publish_pages
 
     render :text=>"OK"
   end

@@ -1,11 +1,13 @@
+require 'RMagick'
+
 class Page < ActiveRecord::Base
 	belongs_to :user_book
 
   mount_uploader :image, PageUploader
 
 	before_create do |page|
-    set_page_no
-		set_width_height
+    set_page_no page
+		set_width_height page
   end
 
 	def publish_to_mq
@@ -23,7 +25,7 @@ class Page < ActiveRecord::Base
 
 	private
 
-	def set_page_no
+	def set_page_no page
 		prev_last_page = Page.where(:user_book_id=>page.user_book.id).last
 
 		if prev_last_page.nil?
@@ -33,10 +35,11 @@ class Page < ActiveRecord::Base
 		end
 	end
 
-	def set_width_height
-		page_img_path = "#{Rails.root.to_s}/#{p.image}"
-		page_img = ImageList.new(page_img_path)
-		self.width = page_img.columns
-		self.height = page_img.rows
+	def set_width_height page
+		page_img_path = "#{Rails.root.to_s}/public#{page.image}"
+		logger.debug "Getting width and height for #{page_img_path}"
+		page_img = Magick::ImageList.new(page_img_path)
+		page.width = page_img.columns
+		page.height = page_img.rows
 	end
 end

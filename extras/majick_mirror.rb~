@@ -12,8 +12,8 @@ require File.expand_path('../../config/boot',  __FILE__)
 require File.expand_path('../../config/environment',  __FILE__)
 require 'RMagick'
 require 'fileutils'
-require '/home/egonz/projects/Majick12/extras/text_cleaner.rb'
-require '/home/egonz/projects/Majick12/extras/levels.rb'
+require 'text_cleaner.rb'
+require 'levels.rb'
 
 include Magick
 
@@ -22,8 +22,10 @@ class MajickMirror
 
 	attr_accessor :output_image_path
 
-  def initialize(image, text_image=true)
+  def initialize(image, max_width, max_height, text_image=true)
 		@text_image = text_image
+		@max_width = max_width
+		@max_height = max_height
 		@work_dir = File.expand_path('../..',  __FILE__) + "/tmp"
 		@public_dir = File.expand_path('../..',  __FILE__) + "/public"
   	@out_dir = @public_dir + File.dirname(image)
@@ -82,14 +84,14 @@ class MajickMirror
 
   def post_process
     #Resize width to iPad resolution
-		#@working_image.resize! 768, @working_image.rows
+		@working_image.resize! @max_width, @working_image.rows
 
 		#Resize height to iPad resolution
-	  #@working_image.resize! @working_image.columns, 1024
+	  @working_image.resize! @working_image.columns, @max_height
 
 		#Extend the image so that the canvas is 1024x768
 		@working_image.gravity = Magick::CenterGravity
-		@working_image.extent 768, 1024
+		@working_image.extent @max_width, @max_height
   end
 
   def remove_temp_files
