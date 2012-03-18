@@ -42,6 +42,11 @@ client.subscribe("/queue/book2pdf", :ack=>'client') do |m|
 
 			hocrux = Hocrux.new
 			hocrux.single_pdf ub.pages, ub.book.title
+
+			edoc = create_edoc(ub, hocrux.single_pdf_file)
+			send_email edoc
+
+			logger.info "Finished creating a single PDF #{hocrux.single_pdf_file}"
 		end
 
 		client.ack m
@@ -50,6 +55,19 @@ client.subscribe("/queue/book2pdf", :ack=>'client') do |m|
    	logger.error("Error in handling queued book2pdf message  [e=#{e}].")
 		logger.error(e.backtrace.join("\n"))
 	end
+end
+
+def create_edoc ub, pdf_file
+	edoc = Edoc.new
+	edoc.user_book=ub
+	edoc.file_name=pdf_file
+	edoc.doc_type='PDF'
+	edoc.save
+	edoc
+end
+
+def send_email edoc
+	HocruxMailer.pdf_conversion_completed(edoc).deliver
 end
 
 loop do

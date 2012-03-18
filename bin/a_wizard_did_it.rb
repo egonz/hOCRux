@@ -61,12 +61,14 @@ client.subscribe("/queue/imagescans", :ack=>'client') do |m|
 
 					if p.all_pages_processed?
 						logger.info "Finished Processing Pages For #{p.user_book.book.title}"
-						#p.user_book.publish_to_mq
+						p.user_book.publish_to_mq
 					end
 				else
 					p.processed=true
 					p.processed_image=mm.output_image_path
 					p.save
+
+					HocruxMailer.imgage_processing_completed(p.user_book).deliver
 				end
 			end
 

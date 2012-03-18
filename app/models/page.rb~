@@ -21,7 +21,7 @@ class Page < ActiveRecord::Base
 	end
 
 	def all_pages_processed?
-		total_pages_processed = Page.where("user_book_id=? AND processed=true",  self.user_book.id ).count
+		total_pages_processed = Page.where("user_book_id=? AND processed=true AND pdf_file is not null",  self.user_book.id ).count
 
 		self.user_book.total_pages == total_pages_processed
 	end

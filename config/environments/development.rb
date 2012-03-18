@@ -14,7 +14,7 @@ Majick12::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  #config.action_mailer.raise_delivery_errors = false
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
@@ -34,6 +34,33 @@ Majick12::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+	config.action_mailer.delivery_method = :smtp
+ 	config.action_mailer.raise_delivery_errors = true
+
+ 	config.action_mailer.smtp_settings = {
+		:tls            => false,
+  	:enable_starttls_auto => true,
+  	:address        => 'smtp.gmail.com',
+  	:port           => 587,
+		:domain         => 'gmail',
+  	:authentication => :plain,
+   	:content_type   => "text/html",
+   	:user_name      => 'hocruxbeta@gmail.com',
+   	:password       => "#{begin IO.read('/home/egonz/.hocrux_email') rescue '' end}"
+	}
+
+	ActionMailer::Base.delivery_method = :smtp # be sure to choose SMTP delivery
+ActionMailer::Base.smtp_settings = {
+  :tls => true,
+  :address => "smtp.gmail.com",
+  :port => 587,
+  :domain => "gmail.com",
+  :authentication => :plain,
+  :user_name => "my_account_at_gmail@gmail.com", # use full email address here
+  :password => "password"
+}
+
 
 	config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

@@ -8,6 +8,8 @@ Majick12::Application.routes.draw do
 	resources :user_books
 	resources :pages
 
+	match 'pages/last_page' => 'pages#last_page'
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

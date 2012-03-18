@@ -25,17 +25,4 @@ class Page < ActiveRecord::Base
 
 		self.user_book.total_pages == total_pages_processed
 	end
-
-	def self.set_last_page user_book_id
-		old_last_pages = Page.where(:user_book_id=>user_book_id, :last_page=>true)
-
-		old_last_pages.each do |old_last_page|
-			old_last_page.last_page=false
-			old_last_page.save
-		end
-
-		page = Page.where(:user_book_id=>user_book_id).last
-		page.last_page=true
-		page.save
-	end
 end

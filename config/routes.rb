@@ -7,6 +7,7 @@ Majick12::Application.routes.draw do
 	resources :books
 	resources :user_books
 	resources :pages
+	resources :edocs
 
 	match 'pages/last_page' => 'pages#last_page'
 

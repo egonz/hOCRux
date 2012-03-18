@@ -9,4 +9,12 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
+
+	def send_email
+  	recipients  self.email
+  	from        "webmaster@example.com"
+  	subject     "Thank you for Registering"
+  	body        :user => self
+ 	end
+
 end
