@@ -47,6 +47,7 @@ gem 'jbuilder'
 
 # Deploy with Capistrano
 gem 'capistrano'
+gem 'capistrano-ext'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'

@@ -47,7 +47,7 @@ Majick12::Application.configure do
   	:authentication => :plain,
    	:content_type   => "text/html",
    	:user_name      => 'hocruxbeta@gmail.com',
-   	:password       => "#{begin IO.read('/home/egonz/.hocrux_email') rescue '' end}"
+   	:password       => "#{begin IO.read('/home/ansata/.hocrux_email') rescue '' end}"
 	}
 
 	ActionMailer::Base.delivery_method = :smtp # be sure to choose SMTP delivery

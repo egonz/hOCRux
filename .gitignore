@@ -18,3 +18,5 @@
 /public/uploads
 /public/user_books
 *~
+.sass-cache/
+public/assets/
