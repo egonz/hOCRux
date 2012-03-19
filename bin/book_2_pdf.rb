@@ -43,7 +43,7 @@ client.subscribe("/queue/book2pdf", :ack=>'client') do |m|
 			hocrux = Hocrux.new
 			hocrux.single_pdf ub.pages, ub.book.title
 
-			edoc = create_edoc(ub, hocrux.single_pdf_file)
+			edoc = create_edoc(ub, hocrux.pdf_file)
 			send_email edoc
 
 			logger.info "Finished creating a single PDF #{hocrux.single_pdf_file}"

@@ -1,8 +1,9 @@
 require 'fileutils'
+require 'digest'
 
 class Hocrux
 
-  attr_accessor :pdf_file, :single_pdf_file
+  attr_accessor :pdf_file
 
   def initialize image=nil
 		unless image == nil
@@ -31,7 +32,8 @@ class Hocrux
 		# combine the pages into one PDF
 		@pdf_file_name = pdf_file.gsub(' ','_')
 		@work_dir = File.expand_path('../..',  __FILE__) + "/tmp/#{@pdf_file_name}/"
-		@single_pdf_dir = File.expand_path('../..',  __FILE__) + "/public/user_books/#{@pdf_file_name}"
+		hash_key = Digest::MD5.hexdigest(Time.new.to_s)
+		@single_pdf_dir = File.expand_path('../..',  __FILE__) + "/public/user/books/#{hash_key}/#{@pdf_file_name}"
 		@single_pdf_file = "#{@single_pdf_dir}/#{@pdf_file_name}.pdf"
 
 		pages.each do |page|
@@ -45,6 +47,8 @@ class Hocrux
 		system ghost_in_the_machine
 
 		rm_temp_files
+
+		@pdf_file = "user/books/#{hash_key}/#{@pdf_file_name}/#{@pdf_file_name}.pdf"
 	end
 
 	private

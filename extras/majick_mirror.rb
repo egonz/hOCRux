@@ -8,8 +8,6 @@
 # public folder.                                        #
 #########################################################
 
-require File.expand_path('../../config/boot',  __FILE__)
-require File.expand_path('../../config/environment',  __FILE__)
 require 'RMagick'
 require 'fileutils'
 require 'text_cleaner.rb'
@@ -83,10 +81,10 @@ class MajickMirror
   end
 
   def post_process
-    #Resize width to iPad resolution
+    #Resize width to max width
 		@working_image.resize! @max_width, @working_image.rows
 
-		#Resize height to iPad resolution
+		#Resize height to max height
 	  @working_image.resize! @working_image.columns, @max_height
 
 		#Extend the image so that the canvas is 1024x768
