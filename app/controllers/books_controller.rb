@@ -6,7 +6,7 @@ class BooksController < ApplicationController
 	end
 
 	def show
-    @user_books = UserBook.where(:user_id=>current_user.id), :book_id=>params[:id])
+    @user_books = UserBook.where(:user_id=>current_user.id, :book_id=>params[:id])
   end
 
 	def new
