@@ -47,7 +47,7 @@ Majick12::Application.configure do
   	:authentication => :plain,
    	:content_type   => "text/html",
    	:user_name      => 'hocruxbeta@gmail.com',
-   	:password       => "#{begin IO.read('/home/egonz/.hocrux_email') rescue '' end}"
+   	:password       => "#{begin IO.read('/home/egonz/.hocrux_email') rescue '' end}".chomp
 	}
 
 	config.action_mailer.default_url_options = { :host => 'localhost:3000' }

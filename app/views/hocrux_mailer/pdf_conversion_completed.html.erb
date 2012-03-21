@@ -13,7 +13,7 @@
   	<h3>The PDF conversion of <%= @edoc.user_book.book.title%> is completed.</h3>
   </div>
 
-	<div id="download_link">Click <a href="<%=url_for(:action=>'show',:controller=>'edoc', :id=>@edoc.id, :only_path=>false)%>">here</a> to download your file.</div>
+	<div id="download_link">Click <a href="<%=url_for(:action=>'show',:controller=>'edocs', :id=>@edoc.id, :only_path=>false)%>">here</a> to download your file.</div>
 
 	<br /><br />
 
