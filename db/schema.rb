@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120325060602) do
+ActiveRecord::Schema.define(:version => 20120325062107) do
+
+  create_table "beta_keys", :force => true do |t|
+    t.string   "key"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -103,6 +109,7 @@ ActiveRecord::Schema.define(:version => 20120325060602) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "authentication_token"
+    t.string   "beta_key"
   end
 
 end

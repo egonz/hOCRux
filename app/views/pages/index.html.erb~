@@ -1,0 +1,7 @@
+<% @user_book.pages.each do |page| %>
+	<div><%= page.processed_image %></div>
+<% end %>
+
+<script>
+    $("body").text("jQuery works");
+</script>

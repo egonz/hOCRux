@@ -23,6 +23,18 @@ class Page < ActiveRecord::Base
 		self.user_book.total_pages == total_pages_processed
 	end
 
+	def processed_image_thumb_url
+		"#{image_dir}/thumb_#{processed_image_file_name}"
+	end
+
+	def image_dir
+		File.dirname(self.processed_image)
+	end
+
+	def processed_image_file_name
+		File.basename(self.processed_image)
+	end
+
 	private
 
 	def set_page_no page

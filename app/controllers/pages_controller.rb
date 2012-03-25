@@ -4,6 +4,9 @@ class PagesController < ApplicationController
   before_filter :find_user_book
   before_filter :find_or_build_page, :except => ['last_page']
 
+	def index
+	end
+
   def new
 
   end

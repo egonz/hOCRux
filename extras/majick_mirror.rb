@@ -18,7 +18,7 @@ include Magick
 
 class MajickMirror
 
-	attr_accessor :output_image_path
+	attr_accessor :output_image_path, :processed_image
 
   def initialize(image, max_width, max_height, text_image=true)
 		@text_image = text_image
@@ -26,7 +26,8 @@ class MajickMirror
 		@max_height = max_height
 		@work_dir = File.expand_path('../..',  __FILE__) + "/tmp"
 		@public_dir = File.expand_path('../..',  __FILE__) + "/public"
-  	@out_dir = @public_dir + File.dirname(image)
+		@input_image_dir = File.dirname(image)
+  	@out_dir = @public_dir + @input_image_dir
     @input_image_file = File.basename image
     @file_name_sans_ext = "#{@input_image_file.chomp(File.extname(@input_image_file))}"
     @tmp_image_file = "#{@work_dir}/#{@file_name_sans_ext}.mpc"
@@ -62,8 +63,17 @@ class MajickMirror
     @working_image.density = "150x150"
     @working_image.compression = Magick::NoCompression
     @logger.info "save image #{@output_image_path}"
-    @working_image.write @output_image_path
+    @working_image = @working_image.write @output_image_path
+
+		@processed_image = "#{@input_image_dir}/#{@file_name_sans_ext}_mj12.JPG"
   end
+
+	def create_thumbnail
+		output_thumb_image_path = "#{@out_dir}/thumb_#{@file_name_sans_ext}_mj12.JPG"
+		@logger.info "CREATING THUMBNAIL #{output_thumb_image_path}"
+		thumbnail = @working_image.resize_to_fit 81
+		thumbnail.write output_thumb_image_path
+	end
 
   private
 

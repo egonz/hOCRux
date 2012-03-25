@@ -5,9 +5,12 @@ class Hocrux
   attr_accessor :pdf_file
 
   def initialize image=nil
+		@public_dir = File.expand_path('../..',  __FILE__) + "/public"
+
 		unless image == nil
 			@input_image = image
-    	@file_name_sans_ext = "#{@input_image.chomp(File.extname(@input_image))}"
+			@input_image_full_path = "#{@public_dir}#{@input_image}"
+    	@file_name_sans_ext = "#{@public_dir}#{@input_image.chomp(File.extname(@input_image))}"
 		end
 
 		@logger = Logger.new(STDOUT)
@@ -15,13 +18,13 @@ class Hocrux
   end
 
   def hocr
-    tesseract = "tesseract #{@input_image} #{@file_name_sans_ext} -l en hocr"
+    tesseract = "tesseract #{@input_image_full_path} #{@file_name_sans_ext} -l en hocr"
     @logger.debug tesseract
     system tesseract
   end
 
 	def pdf
-		hocr2pdf = "hocr2pdf -i #{@input_image} -o #{@file_name_sans_ext}.pdf < #{@file_name_sans_ext}.html"
+		hocr2pdf = "hocr2pdf -i #{@input_image_full_path} -o #{@file_name_sans_ext}.pdf < #{@file_name_sans_ext}.html"
 		@logger.debug hocr2pdf
 		@pdf_file = "#{@file_name_sans_ext}.pdf"
 		system hocr2pdf
@@ -47,7 +50,7 @@ class Hocrux
 
 		rm_temp_files
 
-		@pdf_file = "user/books/#{hash_key}/#{@pdf_file_name}/#{@pdf_file_name}.pdf"
+		@pdf_file = "/user/books/#{hash_key}/#{@pdf_file_name}/#{@pdf_file_name}.pdf"
 	end
 
 	private

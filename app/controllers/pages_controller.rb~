@@ -4,6 +4,10 @@ class PagesController < ApplicationController
   before_filter :find_user_book
   before_filter :find_or_build_page, :except => ['last_page']
 
+	def index
+
+	end
+
   def new
 
   end
@@ -20,9 +24,6 @@ class PagesController < ApplicationController
       logger.error "Error uploading photo"
       flash[:error] = 'Photo could not be uploaded'
     end
-
-    #Publish to MQ for ImageMagick processing
-    @page.publish_to_mq
 
     render :text => render_to_string(:partial => 'pages/page', :locals => {:page => @page})
   end

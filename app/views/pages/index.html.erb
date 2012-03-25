@@ -1,1 +1,3 @@
-List All the Pages for a User Book
+<% @user_book.pages.each do |page| %>
+	<div><%= page.processed_image %></div>
+<% end %>

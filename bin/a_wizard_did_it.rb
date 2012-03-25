@@ -38,21 +38,22 @@ client.subscribe("/queue/imagescans", :ack=>'client') do |m|
 		p = Page.find page["id"]
 
 		if (!exit_requested)
-			mm = MajickMirror.new(p.image.to_s, p.user_book.width, p.user_book.height)
+			mm = MajickMirror.new(p.image_url.to_s, p.user_book.width, p.user_book.height)
 			mm.process_image
 			mm.create_jpg_copy
+			mm.create_thumbnail
 
 			if File.exist? mm.output_image_path
 				if p.user_book.auto_gen_pdf?
 					logger.debug "Performing OCR and generating PDF"
-					hocrux = Hocrux.new mm.output_image_path
+					hocrux = Hocrux.new mm.processed_image
 					hocrux.hocr
 					hocrux.pdf
 
-					logger.info "Processed PDF For #{mm.output_image_path}"
+					logger.info "Processed PDF For #{mm.processed_image}"
 
 					p.processed=true
-					p.processed_image=mm.output_image_path
+					p.processed_image=mm.processed_image
 					p.pdf_file = hocrux.pdf_file
 					p.save
 
@@ -64,7 +65,7 @@ client.subscribe("/queue/imagescans", :ack=>'client') do |m|
 					end
 				else
 					p.processed=true
-					p.processed_image=mm.output_image_path
+					p.processed_image=mm.processed_image
 					p.save
 
 					HocruxMailer.imgage_processing_completed(p.user_book).deliver
