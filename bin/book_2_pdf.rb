@@ -46,7 +46,7 @@ client.subscribe("/queue/book2pdf", :ack=>'client') do |m|
 			edoc = create_edoc(ub, hocrux.pdf_file)
 			send_email edoc
 
-			logger.info "Finished creating a single PDF #{hocrux.single_pdf_file}"
+			logger.info "Finished creating a single PDF #{hocrux.pdf_file}"
 		end
 
 		client.ack m

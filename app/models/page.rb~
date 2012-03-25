@@ -36,7 +36,7 @@ class Page < ActiveRecord::Base
 	end
 
 	def set_width_height page
-		page_img_path = "#{Rails.root.to_s}#{page.image}"
+		page_img_path = "#{Rails.root.to_s}/public#{page.image}"
 		logger.debug "Getting width and height for #{page_img_path}"
 		page_img = Magick::ImageList.new(page_img_path)
 		page.width = page_img.columns

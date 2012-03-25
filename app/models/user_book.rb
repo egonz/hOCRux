@@ -1,8 +1,14 @@
+require 'digest'
+
 class UserBook < ActiveRecord::Base
 	belongs_to :user
 	belongs_to :book
 	belongs_to :library
 	has_many :pages,  :dependent => :destroy
+
+	before_create do |page|
+    create_book_hash_key page
+  end
 
 	def publish_to_mq
 		client = OnStomp::Client.new("stomp://127.0.0.1:61613")
@@ -49,6 +55,10 @@ class UserBook < ActiveRecord::Base
    	self.height = Page.maximum(:height, :conditions=>["user_book_id=?", self.id])
 
 		self.save
+	end
+
+	def create_book_hash_key page
+		page.hash_key = Digest::MD5.hexdigest(Time.new.to_s)
 	end
 
 end

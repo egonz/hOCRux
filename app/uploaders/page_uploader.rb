@@ -1,5 +1,4 @@
 # encoding: utf-8
-require 'digest'
 
 class PageUploader < CarrierWave::Uploader::Base
 
@@ -14,8 +13,9 @@ class PageUploader < CarrierWave::Uploader::Base
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-		hash_key = Digest::MD5.hexdigest(Time.new.to_s)
-    "uploads/#{model.class.to_s.underscore}/#{hash_key}/#{model.user_book.book.title}/#{model.id}"
+		dir = "uploads/#{model.class.to_s.underscore}/#{model.user_book.hash_key}/#{model.user_book.book.title.gsub(' ','_')}/#{model.id}"
+		puts "UPLOADING IMAGE TO: #{dir}"
+    dir
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
