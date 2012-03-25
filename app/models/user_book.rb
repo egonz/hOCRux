@@ -27,7 +27,7 @@ class UserBook < ActiveRecord::Base
 	def publish_pages
 		set_max_width_height
 
-		self.pages.each do |page|
+		self.pages.order('page_no asc').each do |page|
 			page.publish_to_mq
 		end
 	end

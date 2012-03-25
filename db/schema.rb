@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120325023413) do
+ActiveRecord::Schema.define(:version => 20120325060602) do
 
   create_table "books", :force => true do |t|
     t.string   "title"
@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(:version => 20120325023413) do
   create_table "pages", :force => true do |t|
     t.integer  "user_book_id"
     t.string   "processed_image"
-    t.integer  "page_number"
     t.boolean  "processed"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
