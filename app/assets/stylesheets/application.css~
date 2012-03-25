@@ -10,8 +10,15 @@
  *
  *= require_self
  *= require_tree .
+ *= require_top_up_style
 */
 
 body {
 	font-family: sans-serif;
+}
+
+.box {
+	padding: 10px;
+	border: 1px solid gray;
+	width: 700px;
 }

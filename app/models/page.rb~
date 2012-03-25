@@ -1,4 +1,5 @@
 require 'RMagick'
+require 'fileutils'
 
 class Page < ActiveRecord::Base
 	belongs_to :user_book
@@ -24,7 +25,7 @@ class Page < ActiveRecord::Base
 	end
 
 	def processed_image_thumb_url
-		"#{image_dir}/thumb_#{processed_image_file_name}"
+		"#{image_dir}/thumb_#{processed_image_file_name}" unless self.processed_image.nil?
 	end
 
 	def image_dir
@@ -32,7 +33,7 @@ class Page < ActiveRecord::Base
 	end
 
 	def processed_image_file_name
-		File.dirname(self.processed_image)
+		File.basename(self.processed_image)
 	end
 
 	private
