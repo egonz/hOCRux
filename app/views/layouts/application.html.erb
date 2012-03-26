@@ -4,16 +4,28 @@
   <title>hOCRux</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
-	<script type="text/javascript" src="http://gettopup.com/releases/latest/top_up-min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<div id="main_header">
-	<div id="logo"><%= image_tag 'hOCRux_logo.jpg' %></div>
+<div id="main_header" class="rounded">
+	<div id="logo"><%= image_tag 'hOCRux_logo_grey.jpg' %></div>
+	<div id="user">
+		<% unless @user.nil? %>
+			<div id="user-id">
+				Welcome: <%= @user.first_name %>
+			</div>
+
+			<div id="sign-out">
+				<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+			</div>
+		<% end %>
+	</div>
 </div>
 
-<%= yield %>
+<div id="content">
+	<%= yield %>
+</div>
 
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>

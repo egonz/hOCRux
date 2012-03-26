@@ -15,3 +15,4 @@
 //= require_tree .
 //= require swfobject
 //= require jquery.uploadify
+//= require galleria/galleria-1.2.6.min.js

@@ -1,1 +1,69 @@
-Show Pages
+<script>
+$(document).ready(function() {
+  <% key = Rails.application.config.session_options[:key] %>
+  var uploadify_script_data = {};
+  var csrf_param = $('meta[name=csrf-param]').attr('content');
+  var csrf_token = $('meta[name=csrf-token]').attr('content');
+  uploadify_script_data[csrf_param] = encodeURI(encodeURIComponent(csrf_token));
+  uploadify_script_data['<%= key %>'] = '<%= cookies[key] %>';
+	var script = "/pages/replace/<%=@page.id%>/?book_id=<%=@user_book.id%>";
+	var cancel_img = "<%= image_path('cancel.png') %>";
+	var page_no = 0;
+
+  $('#uploadify').uploadify({
+    uploader        : '/uploadify.swf',
+    script          : script,
+    cancelImg       : cancel_img,
+		buttonText      : 'Replace Page',
+    auto            : true,
+    multi           : false,
+    removeCompleted : true,
+    scriptData      : uploadify_script_data,
+    onComplete      : function(event, ID, fileObj, doc, data) {
+			$('#pages').append(doc);
+			page_no += 1;
+    },
+		onAllComplete   : function(event,data) {
+      $.post("/pages/last_page", { book_id: <%=@user_book.id%>, total_pages: page_no });
+    }
+  });
+});
+</script>
+
+<div id="page-show">
+	<div id="page-info">
+		<div id="book-title">
+			<%= @page.user_book.book.title %>
+		</div>
+
+		<div class="page-info-data">
+			Page: <%= @page.page_no %>
+		</div>
+
+		<div class="page-info-data">
+			Width: <%= @page.user_book.width %>
+		</div>
+
+		<div class="page-info-data">
+			Height: <%= @page.user_book.height %>
+		</div>
+
+		<div class="page-info-data">
+			File Name: <%= file_name @page.processed_image %>
+		</div>
+
+		<div id="replace-page">
+			<input id="uploadify" name="uploadify" type="file" />
+		</div>
+	</div>
+
+	<div id="page-editor">
+		<div id="page-editor-tools-nav">
+			Add RMagick Bells and Whistles....
+		</div>
+
+		<div id="processed-image">
+			<img src="<%=@page.processed_image%>" width="768" height="1024" />
+		</div>
+	</div>
+</div>

@@ -15,6 +15,10 @@ class PagesController < ApplicationController
 
   end
 
+	def replace
+
+	end
+
   def create
     logger.debug "UserBook: #{@user_book.inspect}"
     logger.debug "Page: #{@page.inspect}"

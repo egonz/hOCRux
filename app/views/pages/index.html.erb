@@ -1,19 +1,29 @@
 <div id="pages">
-<% @user_book.pages.each do |page| %>
-	<% unless page.processed_image.nil? %>
-		<a class="top_up" href="<%= page.processed_image %>"><img src="<%= page.processed_image_thumb_url %>"/></a>
+	<div id="gallery">
+	<% @user_book.pages.each do |page| %>
+		<% unless page.processed_image.nil? %>
+			<a href="<%= page.processed_image %>">
+				<img src="<%= page.processed_image_thumb_url %>"
+					longdesc="/pages/<%=page.id%>/?book_id=<%=@user_book.id%>"/>
+			</a>
+		<% end %>
 	<% end %>
-<% end %>
+	</div>
 </div>
 
 <script type="text/javascript">
-	TopUp.addPresets({
-  	"#pages a": {
-    	title: "Gallery {alt} ({current} of {total})",
-     	group: "pages",
-     	readAltText: 1,
-     	shaded: 1,
-			y: 10
-   	}
+	Galleria.loadTheme('/assets/galleria/themes/classic/galleria.classic.min.js');
+	$('#gallery').galleria({
+		width:768,
+		height:1024,
+		extend:function() {
+    	this.attachKeyboard({
+        left: this.prev,
+        right: this.next,
+        up: function() {
+            Galleria.log('up key pressed');
+        }
+    	});
+		}
 	});
 </script>

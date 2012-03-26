@@ -9,11 +9,59 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require galleria/themes/classic/galleria.classic.css
  *= require_tree .
 */
 
 body {
-	font-family: sans-serif;
+	background: none repeat scroll 0 0 #white;
+  color: #222;
+  font-family: Georgia,serif;
+  font-size: 11px;
+  font-style: italic;
+  line-height: 16px;
+  margin: 0;
+  padding: 30px;
+}
+
+#main_header {
+	position: absolute;
+  top: 0;
+	left: 0;
+	width: 100%;
+	height: 113px;
+	margin: 0;
+	padding: 0;
+	background-color: #333;
+	text-align: bottom;
+}
+
+#logo {
+	padding-left: 20px;
+  padding-top: 10px;
+  width: 340px;
+	float: left;
+}
+
+a:link {color:#FF8C33;}      /* unvisited link */
+a:visited {color:#FF8C33;}  /* visited link */
+a:hover{background-color:#7FBBF3;}
+
+#user {
+	float: right;
+	color: white;
+	margin: 30px 20px 0px 0px;
+	text-decoration: none;
+	color: #999;
+}
+
+#sign-out {
+	margin-top: 5px;
+}
+
+#content {
+	position: absolute;
+	top: 125px;
 }
 
 .box {

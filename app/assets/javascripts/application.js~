@@ -15,4 +15,3 @@
 //= require_tree .
 //= require swfobject
 //= require jquery.uploadify
-//= require top_up-min

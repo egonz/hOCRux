@@ -56,7 +56,9 @@ module Majick12
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-        # Add additional load paths for your own custom dirs
+    config.assets.paths << "#{Rails.root}/vendor/assets/libs"
+
+    # Add additional load paths for your own custom dirs
     %w(observers mailers middleware).each do |dir|
       config.autoload_paths << "#{config.root}/app/#{dir}"
     end
