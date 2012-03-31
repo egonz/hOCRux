@@ -22,7 +22,10 @@
         right: this.next,
         up: function() {
             Galleria.log('up key pressed');
-        }
+        },
+        13: function() {
+		document.location = this.getData().link;
+	}
     	});
 		}
 	});
