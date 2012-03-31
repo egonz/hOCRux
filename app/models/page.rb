@@ -40,6 +40,19 @@ class Page < ActiveRecord::Base
 		File.basename(self.processed_image)
 	end
 
+	def full_path_to_image
+		"#{Rails.root.to_s}/public#{File.dirname(self.processed_image)}"
+	end
+
+	def remove_dir
+		logger.info "removing dir #{full_path_to_image}"
+		FileUtils.remove_dir full_path_to_image 
+	end
+
+	def processing_completed?
+		File.exist?("#{Rails.root.to_s}/public#{self.processed_image}")
+	end
+
 	private
 
 	def set_page_no page

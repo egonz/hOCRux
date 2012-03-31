@@ -20,14 +20,27 @@ $(document).ready(function() {
     removeCompleted : true,
     scriptData      : uploadify_script_data,
     onComplete      : function(event, ID, fileObj, doc, data) {
-			$('#pages').append(doc);
-			page_no += 1;
-    },
-		onAllComplete   : function(event,data) {
-      $.post("/pages/last_page", { book_id: <%=@user_book.id%>, total_pages: page_no });
-    }
-  });
+			image_processing_complete_timer(doc);
+		      }
+   });
 });
+
+function image_processing_complete_timer(image_src)
+{
+	var times = 20;
+	$(document).everyTime(1000, 'processed', function(i) {
+		$.get("/pages/processed/<%=@page.id %>/?book_id=<%=@user_book.id%>", function(data) {
+			if (data == 'true')
+			{
+				$("#processed-image img").attr("src",image_src);
+				$(document).stopTime('processed');
+			}
+		});
+	}, times);
+	
+	return true;		
+}
+
 </script>
 
 <div id="page-show">

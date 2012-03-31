@@ -16,7 +16,7 @@
 /log/*.output
 /tmp
 /public/uploads
-/public/user_books
+/public/user/books
 *~
 .sass-cache/
 public/assets/

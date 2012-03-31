@@ -4,8 +4,8 @@ class PagesController < ApplicationController
   before_filter :find_user_book
   before_filter :find_or_build_page, :except => ['last_page']
 
-	def index
-	end
+  def index
+  end
 
   def new
 
@@ -15,9 +15,26 @@ class PagesController < ApplicationController
 
   end
 
-	def replace
+  def replace
+    unless @page.nil?
+	@page.remove_dir
+    	@page.image = params[:Filedata]
+	@page.processed_image=nil
+    	@page.save
 
+	@user_book.publish_pages
+    end
+
+    render :text=>@page.image_url
+  end
+
+  def processed
+	if @page.processing_completed?
+		render :text=>'true'
+	else
+		render :text=>'false'	
 	end
+  end
 
   def create
     logger.debug "UserBook: #{@user_book.inspect}"
