@@ -43,10 +43,12 @@ function image_processing_complete_timer(image_src)
 
 </script>
 
+<%= render :partial => 'pages/menu', :page => @page %>
+
 <div id="page-show">
 	<div id="page-info">
 		<div id="book-title">
-			<%= @page.user_book.book.title %>
+			<%= link_to @user_book.book.title, @user_book %>
 		</div>
 
 		<div class="page-info-data">

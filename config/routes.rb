@@ -12,7 +12,7 @@ Majick12::Application.routes.draw do
 	match 'pages/last_page' => 'pages#last_page'
 	match 'pages/replace/:id' => 'pages#replace'
 	match 'pages/processed/:id' => 'pages#processed'
-
+	
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
