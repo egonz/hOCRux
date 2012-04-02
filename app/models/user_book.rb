@@ -5,6 +5,7 @@ class UserBook < ActiveRecord::Base
 	belongs_to :book
 	belongs_to :library
 	has_many :pages,  :dependent => :destroy
+	has_many :edocs,  :dependent => :destroy
 
 	before_create do |page|
     create_book_hash_key page

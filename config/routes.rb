@@ -9,7 +9,8 @@ Majick12::Application.routes.draw do
 	resources :pages
 	resources :edocs
 
-	match 'my/books(/:id)' => 'user_books#index', :as => 'my_books'
+	match 'my/books' => 'user_books#index', :as => 'my_books'
+	match 'my/books/show/:id' => 'user_books#show', :as => 'my_books_show'
 	match 'my/books/new' => 'user_books#new', :as => 'my_books_new'
 
 	match 'pages/last_page' => 'pages#last_page'
