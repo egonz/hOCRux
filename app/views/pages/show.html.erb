@@ -37,13 +37,13 @@ function image_processing_complete_timer(image_src)
 			}
 		});
 	}, times);
-	
-	return true;		
+
+	return true;
 }
 
 </script>
 
-<%= render :partial => 'pages/menu', :page => @page %>
+<%= render :partial => 'pages/menu', :locals => {:page => @page} %>
 
 <div id="page-show">
 	<div id="page-info">
