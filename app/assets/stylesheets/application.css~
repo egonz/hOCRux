@@ -11,10 +11,11 @@
  *= require_self
  *= require galleria/themes/classic/galleria.classic.css
  *= require_tree .
+ *= dropdown_one.css
 */
 
 body {
-	background: none repeat scroll 0 0 #white;
+	background: none repeat scroll 0 0 white;
   color: #222;
   font-family: Georgia,serif;
   font-size: 11px;
@@ -43,8 +44,8 @@ body {
 	float: left;
 }
 
-a:link {color:#FF8C33;}      /* unvisited link */
-a:visited {color:#FF8C33;}  /* visited link */
+a:link {color:#FF8C33; text-decoration:none;}      /* unvisited link */
+a:visited {color:#FF8C33; text-decoration:none;}  /* visited link */
 a:hover{background-color:#7FBBF3;}
 
 #user {
@@ -52,11 +53,15 @@ a:hover{background-color:#7FBBF3;}
 	color: white;
 	margin: 30px 20px 0px 0px;
 	text-decoration: none;
-	color: #999;
 }
 
 #sign-out {
-	margin-top: 10px;
+	margin-top: 5px;
+}
+
+#sign-out a {
+	color: white;
+	text-decoration: underline;
 }
 
 #content {

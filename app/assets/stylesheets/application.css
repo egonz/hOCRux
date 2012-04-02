@@ -44,8 +44,8 @@ body {
 	float: left;
 }
 
-a:link {color:#FF8C33; text-decoration:none;}      /* unvisited link */
-a:visited {color:#FF8C33; text-decoration:none;}  /* visited link */
+a:link {color:#A20000; text-decoration:none;}      /* unvisited link */
+a:visited {color:#A20000; text-decoration:none;}  /* visited link */
 a:hover{background-color:#7FBBF3;}
 
 #user {
@@ -53,11 +53,15 @@ a:hover{background-color:#7FBBF3;}
 	color: white;
 	margin: 30px 20px 0px 0px;
 	text-decoration: none;
-	color: #999;
 }
 
 #sign-out {
 	margin-top: 5px;
+}
+
+#sign-out a {
+	color: white;
+	text-decoration: underline;
 }
 
 #content {
