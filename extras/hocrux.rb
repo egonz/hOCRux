@@ -72,7 +72,7 @@ class Hocrux
 	end
 
 	def rm_temp_files
-		unless File.exist? @work_dir
+		if File.exist? @work_dir
 			FileUtils.remove_dir @work_dir
 		end
 	end

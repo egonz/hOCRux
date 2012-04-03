@@ -22,7 +22,7 @@ class PagesController < ApplicationController
 	@page.processed_image=nil
     	@page.save
 
-	@user_book.publish_pages
+	@page.publish_to_mq
     end
 
     render :text=>@page.image_url
