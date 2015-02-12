@@ -33,6 +33,15 @@ class UserBook < ActiveRecord::Base
 		end
 	end
 
+	def publish_unprocessed_pages
+                set_max_width_height
+
+                self.pages.where(:processed_image=>nil).order('page_no asc').each do |page|
+			logger.info "Processing Unprocessed Page ID: #{page.id}"
+                        page.publish_to_mq
+                end
+        end
+
 	def self.create_book title, isbn, user, auto_gen_pdf, email_doc
 		logger.info "Searching for Book Title #{title} OR ISBN #{isbn}..."
 		book = Book.find_book title, isbn

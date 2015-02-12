@@ -2,13 +2,13 @@ require 'RMagick'
 require 'fileutils'
 
 class Page < ActiveRecord::Base
-	belongs_to :user_book
+  belongs_to :user_book
 
   mount_uploader :image, PageUploader
 
-	before_create do |page|
+  before_create do |page|
     set_page_no page
-		set_width_height page
+    set_width_height page
   end
 
 	def publish_to_mq
